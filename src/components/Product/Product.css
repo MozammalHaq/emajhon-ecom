@@ -1,0 +1,30 @@
+.product {
+  border: 1px solid gray;
+  border-radius: 8px;
+}
+.product img {
+  width: calc(100% - 10px);
+  border-radius: 8px;
+  padding: 5px;
+  display: inline-block;
+}
+.product-info {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.product-info p,
+.product-info h6 {
+  margin: 0;
+  margin-bottom: 3px;
+}
+.product-info p {
+    font-size: 12px;
+}
+.btn-cart {
+    width: 100%;
+    border: none;
+    border-top: 1px solid gray;
+    border-radius: 0 0 8px 8px;
+    background-color: chocolate;
+}
