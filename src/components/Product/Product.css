@@ -1,6 +1,7 @@
 .product {
   border: 1px solid gray;
   border-radius: 8px;
+  position: relative;
 }
 .product img {
   width: calc(100% - 10px);
@@ -27,4 +28,8 @@
     border-top: 1px solid gray;
     border-radius: 0 0 8px 8px;
     background-color: chocolate;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
+
