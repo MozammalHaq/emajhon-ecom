@@ -1,0 +1,9 @@
+.cart {
+    background-color: rgba(255, 127, 80, 0.501);
+    padding: 15px;
+    position: fixed;
+}
+
+.cart p {
+    font-size: 12px;
+}
