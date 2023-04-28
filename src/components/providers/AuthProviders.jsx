@@ -6,15 +6,20 @@ export const AuthContext = createContext(null)
 const auth = getAuth(app)
 
 const AuthProviders = ({ children }) => {
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true)
 
     // Create User Email and password
     const createUser = (email, password) => {
+        // for path replace
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
     // Sign in user Email and Password
     const logInUserEmailPassword = (email, password) => {
+        // for path replace
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
@@ -27,6 +32,7 @@ const AuthProviders = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
+            setLoading(false);
         });
         // stop observing while unmounting
         return () => {
@@ -36,6 +42,7 @@ const AuthProviders = ({ children }) => {
 
     const authInfo = {
         user,
+        loading,
         createUser,
         logInUserEmailPassword,
         logOut,
